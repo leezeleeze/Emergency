@@ -1,0 +1,144 @@
+CLASS EMERGENCY
+    arrive()
+        Inputs person into a list that will indicate them as a patient
+
+    priority()
+        This will classify the triage of the patient's case and
+        input the triage level of the patient into a list
+
+    schedule()
+        We will organize our patients by first inputting them into a dictionary
+        with the patient's name as a key and the triage as their value.
+
+        This function will then sort the cases based on priority level to schedule
+        appointments with the doctor and print it out
+
+    call()
+        updates the appointments list and pops patient out
+
+    announce()
+        announces for next patient for doctor's appointment
+
+CALL OPTIONS
+
+Assuming we name the call function 'new'
+
+new = Emergency()
+
+new.arrive('INSERT NAME') # Will input a new person's name
+
+new.schedule() # Will input patient in a queue based on priority
+
+new.announce() # Pops completed appointment and call for next patient.
+
+-------
+CASE 1:
+-------
+
+------------------------------------------------
+INPUT:
+------------------------------------------------
+    new = Emergency()
+    new.arrive('S. Aktar')
+    new.priority(random.randint(0,10))
+
+    new.arrive('N. Cabel')
+    new.priority(random.randint(0,10))
+
+    new.arrive('A. Harris')
+    new.priority(random.randint(0,10))
+
+    new.arrive('L. Silva')
+    new.priority(random.randint(0,10))
+
+    new.arrive('E. Yang')
+    new.priority(random.randint(0,10))
+
+    new.arrive('R. Locke')
+    new.priority(random.randint(0,10))
+
+    new.arrive('G. Willis')
+    new.priority(random.randint(0,10))
+
+    new.arrive('M. King')
+    new.priority(random.randint(0,10))
+
+    new.arrive('R. Veins')
+    new.priority(random.randint(0,10))
+
+    new.arrive('F. Angelo')
+    new.priority(random.randint(0,10))
+
+    new.schedule()
+    new.announce()
+    new.call()
+    new.announce()
+
+------------------------------------------------
+OUTPUT: (NOTE: THIS IS COMPLETELY RANDOM PATIENT'S CASE ORDER, FORMATTING REMAINS THE SAME)
+------------------------------------------------
+
+    PRIORITY APPOINTMENTS
+    --------------
+    Patient: E. Yang 	 Priority Level: 0
+    Patient: F. Angelo 	 Priority Level: 0
+    Patient: N. Cabel 	 Priority Level: 6
+    Patient: L. Silva 	 Priority Level: 6
+    Patient: M. King 	 Priority Level: 6
+    Patient: S. Aktar 	 Priority Level: 8
+    Patient: R. Locke 	 Priority Level: 8
+    Patient: R. Veins 	 Priority Level: 8
+    Patient: A. Harris 	 Priority Level: 10
+    Patient: G. Willis 	 Priority Level: 10
+    ------------
+    ANNOUNCEMENT: Calling for E. Yang
+    ------------
+
+    UPDATED APPOINTMENTS
+    --------------
+    Patient: F. Angelo 	 Priority Level: 0
+    Patient: N. Cabel 	 Priority Level: 6
+    Patient: L. Silva 	 Priority Level: 6
+    Patient: M. King 	 Priority Level: 6
+    Patient: S. Aktar 	 Priority Level: 8
+    Patient: R. Locke 	 Priority Level: 8
+    Patient: R. Veins 	 Priority Level: 8
+    Patient: A. Harris 	 Priority Level: 10
+    Patient: G. Willis 	 Priority Level: 10
+    ------------
+    ANNOUNCEMENT: Calling for F. Angelo
+    ------------
+
+------------------------------------------------
+RERUN OUTPUT:
+------------------------------------------------
+    PRIORITY APPOINTMENTS
+    --------------
+    Patient: R. Veins 	 Priority Level: 2
+    Patient: G. Willis 	 Priority Level: 3
+    Patient: A. Harris 	 Priority Level: 4
+    Patient: E. Yang 	 Priority Level: 4
+    Patient: L. Silva 	 Priority Level: 6
+    Patient: F. Angelo 	 Priority Level: 6
+    Patient: M. King 	 Priority Level: 7
+    Patient: N. Cabel 	 Priority Level: 8
+    Patient: S. Aktar 	 Priority Level: 9
+    Patient: R. Locke 	 Priority Level: 10
+    ------------
+    ANNOUNCEMENT: Calling for R. Veins
+    ------------
+
+    UPDATED APPOINTMENTS
+    --------------
+    Patient: G. Willis 	 Priority Level: 3
+    Patient: A. Harris 	 Priority Level: 4
+    Patient: E. Yang 	 Priority Level: 4
+    Patient: L. Silva 	 Priority Level: 6
+    Patient: F. Angelo 	 Priority Level: 6
+    Patient: M. King 	 Priority Level: 7
+    Patient: N. Cabel 	 Priority Level: 8
+    Patient: S. Aktar 	 Priority Level: 9
+    Patient: R. Locke 	 Priority Level: 10
+    ------------
+    ANNOUNCEMENT: Calling for G. Willis
+    ------------
